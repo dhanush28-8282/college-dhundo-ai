@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background: linear-gradient(to right, #0b1c3a, #0077b6);
+    background: linear-gradient(to right, #0b1c3a, #04338b);
     color: white;
     flex-wrap: wrap;
   }
@@ -19,14 +19,48 @@
     width: auto;
   }
   
-  .nav-links a {
-    margin: 0 1rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+  @keyframes navGradientFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .nav-links a:hover {
-    color: #ff8c42;
+  50% {
+    background-position: 100% 50%;
   }
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(270deg, #22c55e, #38bdf8, #22c55e, #84cc16, #3b82f6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: navGradientFlow 6s ease infinite;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #22c55e, #38bdf8, #84cc16);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a:hover {
+  text-shadow: 0 0 6px #38bdf8aa, 0 0 12px #22c55e66;
+}
