@@ -1,0 +1,25 @@
+.page-container {
+    padding: 4rem 2rem;
+    background-color: #0b1c3a;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .page-container h1 {
+    font-size: 2rem;
+    color: #00b4d8;
+    margin-bottom: 1rem;
+  }
+  
+  .page-container p,
+  .page-container li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+  .page-container ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+  }
+  

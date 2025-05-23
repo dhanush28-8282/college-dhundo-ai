@@ -1,0 +1,168 @@
+.home {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background-color: #0a0f2c;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: linear-gradient(to right, #003973, #007cad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 0.8rem 2rem;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* ✨ New clean modern divider ✨ */
+.slanted-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #0a0f2c;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  z-index: 0;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animated-gradient-text {
+  font-weight: 800;
+  font-size: 2.5rem;
+  background: linear-gradient(270deg, #22c55e, #38bdf8, #22c55e, #84cc16, #3b82f6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+/* Subtle glow effect on hover */
+.animated-gradient-text:hover {
+  text-shadow:
+    0 0 6px #38bdf8aa,
+    0 0 12px #22c55e66;
+}
+
+/* Animated underline */
+.animated-gradient-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8, #84cc16);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+.animated-gradient-text:hover::after {
+  width: 100%;
+}
+
+
+.features {
+  background: #0a0f2c;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #22c55e;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #1a1f3c;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+}
+
+.about {
+  padding: 3rem 2rem;
+  background: #121528;
+  text-align: center;
+}
+
+.about h2 {
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.footer {
+  text-align: center;
+  background: #0d111f;
+  padding: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}
