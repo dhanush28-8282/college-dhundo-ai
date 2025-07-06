@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-brand">
         <img src={logo} alt="College Dhundo AI Logo" className="logo" />
-        <h2>College Dhundo AI</h2>
+        <h2 className="animated-gradient-text">College Dhundo AI</h2>
       </div>
       <div className="nav-links">
         <Link to="/">Home</Link>
